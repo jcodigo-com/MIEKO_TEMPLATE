@@ -45,6 +45,24 @@ html, body {
     width: 150px;
 }
 
+.img-full{
+    width: 50%;
+}
+
+.img-full-std{
+    width: 90%;
+}
+
+.medium-text{
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.title-medium{
+    font-size: 30px;
+    font-family: "poiret";
+}
+
 .content-main{
     margin-top: 80px;
     padding-top: 20px;
@@ -129,6 +147,14 @@ html, body {
 
     .icon-ventas-corporativa{
         width: 80px;
+    }
+
+    .img-full{
+        width: 100%;
+    }
+
+    .img-full-std{
+        width: 100%;
     }
 }
 
