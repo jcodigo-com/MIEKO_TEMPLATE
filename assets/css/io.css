@@ -1,5 +1,5 @@
 :root {
-    --principal-yellow: rgb(223, 210, 37);
+    --principal-yellow: rgb(252, 204, 22);
     --principal-green: #03B8A4;
 }
 
@@ -32,6 +32,13 @@ html, body {
     overflow-x: hidden;
 }
 
+p{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 .header-main{
     position: fixed;
     top: 0;
@@ -43,6 +50,10 @@ html, body {
 
 .header-main .logo {
     width: 150px;
+}
+
+.img-100{
+    width: 100%;
 }
 
 .img-full{
@@ -150,6 +161,94 @@ html, body {
     width: 100%;
 }
 
+.btn-add-product{
+    background-color: var(--principal-yellow);
+    border : 0px;
+    font-weight: bold;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 13px;
+}
+
+.detail-product-quantity{
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    padding: 0.5rem 0.5rem;
+    min-width: 100px;
+}
+
+.price-sale{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.price-list{
+
+}
+
+
+/* Product desplegable */
+.tabs-jc {
+    overflow: hidden;
+}
+
+.tab-jc {
+    width: 100%;
+    color: black;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.tab-jc-label {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 1em;
+    background: #f1f3f6;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tab-jc-content{
+    display: none;
+}
+
+.tab-jc-label:hover {
+    background: #e2e5ea;
+}
+
+.tab-jc-label::after {
+    content: "\276F";
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    -webkit-transition: all .35s;
+    transition: all .35s;
+}
+
+.input-desplegable:checked + .tab-jc-label {
+    background: #e2e5ea;
+}
+
+.input-desplegable:checked + .tab-jc-label::after {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+
+.input-desplegable:checked ~ .tab-jc-content {
+    max-height: 100vh;
+    padding: 1em;
+    display: block;
+}
+
+.input-desplegable {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+/* Product desplegable */
+
+
 @media only screen and (max-width: 1200px) {
     .container-center{
         padding-left: 20px;
@@ -171,9 +270,65 @@ html, body {
     .img-full-std{
         width: 100%;
     }
+
+    .title-detail-product{
+        text-align: center;
+        margin-top: 0px;
+        padding-top: 0px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    .sku-detail-product{
+        text-align: center;
+        margin-top: 0px;
+        padding-top: 0px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    .price-sale{
+        text-align: center;
+        margin-top: 0px;
+        padding-top: 0px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    .price-list{
+        text-align: center;
+        margin-top: 0px;
+        padding-top: 0px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    .detail-product-quantity{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .label-cantidad{
+        text-align: center;
+    }
+
+    .btn-add-product{
+        width: 100%;
+    }
+
 }
 
-@media all and (min-width: 900px) {
+@media screen and (min-width: 700px) and (max-width: 900px) { 
+
+    .img-main-detail-product{
+        width: 70%;
+    }
+
+}
+
+
+@media all and (min-width: 999px) {
     .deskContent {display:block;}
     .mobileContent {display:none;}
 }
