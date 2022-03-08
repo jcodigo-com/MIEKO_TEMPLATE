@@ -1,0 +1,35 @@
+.header-main{
+    position: fixed;
+    background: $white-color;
+    width: 100%;
+    transition: all .5s;
+    height: $height-header;
+    width: 100%;
+    z-index: 1001;
+    box-shadow: 0 0 5px rgba(18,23,39,.5);
+    top: 0px;
+}
+
+.logo-header {
+    float: left;
+    width: 250px;
+    height: 60px;
+    line-height: 60px;
+    color: #333333;
+    z-index: 1001;
+    font-size: 17px;
+    font-weight: $font-weight-normal;
+    padding-left: 25px;
+    padding-right: 25px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: all .3s;
+    .logo {
+        color: $body-text-color;
+        opacity: 1;
+        position: relative;
+        height: 100%;
+        width: 150px;
+    }
+}

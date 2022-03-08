@@ -1,21 +1,45 @@
-var carouselWidth = $(".carousel-inner-custom")[0].scrollWidth;
-var cardWidth = $(".carousel-item-custom").width();
-var scrollPosition = 0;
+"use strict";
 
-$(".carousel-control-next-custom").on("click", function () {
-    console.log("clicked");
-    if (scrollPosition < (carouselWidth - cardWidth * 4)) { //check if you can go any further
-      scrollPosition += cardWidth;  //update scroll position
-      $(".carousel-inner-custom").animate({ scrollLeft: scrollPosition },600); //scroll left
-    }
+$(document).ready(function(){
+    
+    $('.slick-banner').slick({
+        autoplay: true,
+        autoplaySpeed: 5000,
+    });
+
+    $('.slick-carousel-product').slick({
+        infinite: true,
+        autoplay: true,
+        slidesToShow: 5,
+        autoplaySpeed: 5000,
+        arrows: true,
+        prevArrow: '<div class="slick-prev h1 text-primary"><i class="fa fa-angle-left" aria-hidden="true"></i></div>',
+    nextArrow: '<div class="slick-next h1 text-primary"><i class="fa fa-angle-right" aria-hidden="true"></i></div>',
+        responsive: [
+            {
+                breakpoint: 1500,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },            
+            {
+                breakpoint: 1250,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },            
+            {
+                breakpoint: 900,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 560,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
 });
-
-$(".carousel-control-prev-custom").on("click", function () {
-    if (scrollPosition > 0) {
-      scrollPosition -= cardWidth;
-      $(".carousel-inner-custom").animate(
-        { scrollLeft: scrollPosition },
-        600
-      );
-    }
-  });

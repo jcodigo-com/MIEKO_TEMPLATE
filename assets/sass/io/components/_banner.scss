@@ -1,0 +1,21 @@
+.banner-home{
+    .mobile{
+        display: none;
+    }
+
+    .desktop{
+        display: block;
+    }
+}
+
+@media screen and (max-width: $max-mobile) {
+    .banner-home{
+        .mobile{
+            display: block;
+        }
+
+        .desktop{
+            display: none;
+        }
+    }
+}

@@ -1,376 +1,477 @@
-:root {
-    --principal-yellow: rgb(252, 204, 22);
-    --principal-green: #03B8A4;
+/*!
+
+ =========================================================
+ * JCodigo Mieko template 
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+[Table of contents]
+
+* Background
+* Typography
+* Layouts
+   + Body & Wrapper
+   + Main Header
+   + Sidebar
+* Layouts Color
+* Components
+   + Breadcrumbs
+   + Cards
+     - Card Stats
+     - Card Task
+     - Card States
+     - Card Posts
+     - Card Pricing
+     - Card Annoucement
+     - Card Profile
+     - Accordion
+   + Inputs
+   + Tables
+   + Navbars
+   + Navsearch
+   + Badges
+   + Dropdowns
+   + Charts
+   + Alerts
+   + Buttons
+   + Navtabs
+   + Popovers
+   + Progress
+   + Paginations
+   + Sliders
+   + Modals
+   + Timeline
+   + Maps
+   + Invoice
+   + Messages
+   + Tasks
+   + Settings
+* Plugins
+   + jQueryUI
+   + jQuery Scrollbar
+   + Css Animate
+   + Full Calendar
+   + SweetAlert
+   + Datatables
+
+* Responsive
+
+# [Color codes]
+
+body-text-color: #575962
+white-color: #ffffff
+black-color: #191919
+transparent-bg : transparent
+default-color : #282a3c
+primary-color : #177dff
+secondary-color : #716aca
+info-color : #36a3f7
+success-color : #35cd3a
+warning-color : #ffa534
+danger-color : #f3545d
+
+-------------------------------------------------------------------*/
+*:focus {
+  outline: 0 !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
+/*   Typography    */
 @font-face {
-    font-family: "gilroy";
-    src: url("../font/gilroy-light.otf");
+  font-family: "quicksand";
+  src: url("../../assets/fonts/Quicksand-VariableFont_wght.ttf");
+}
+* {
+  font-family: "quicksand";
 }
 
-@font-face {
-    font-family: "poiret";
-    src: url("../font/poiret-one.ttf");
+body, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, .btn-simple, .alert, a, .td-name, td, button.close {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Lato", sans-serif;
 }
 
-@font-face {
-    font-family: "quicksand";
-    src: url("../font/Quicksand-VariableFont_wght.ttf");
+body {
+  font-size: 14px;
+  color: #575962;
 }
 
-@font-face {
-    font-family: "humanist";
-    src: url("../font/Humanist.ttf");
+a {
+  color: #03B8A4;
+}
+a:hover, a:focus {
+  color: #1269DB;
 }
 
-*{
-    font-family: "quicksand";
+h1,
+.h1 {
+  font-size: 1.725rem;
+}
+
+h2,
+.h2 {
+  font-size: 1.35rem;
+}
+
+h3,
+.h3 {
+  font-size: 1.1625rem;
+}
+
+h4,
+.h4 {
+  font-size: 1.0375rem;
+}
+
+h5,
+.h5 {
+  font-size: 0.9125rem;
+}
+
+h6,
+.h6 {
+  font-size: 0.825rem;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.82;
+  margin-bottom: 1rem;
+  word-break: break-word;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  line-height: 1.4;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a {
+  color: inherit;
+}
+
+small, .small {
+  font-size: 13px;
+}
+
+b, .b, strong, .strong {
+  font-weight: 600;
+}
+
+.page-pretitle {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #95aac9;
+}
+
+.page-title {
+  font-size: 23px;
+  font-weight: 600;
+  color: #444444;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+
+.page-category {
+  color: #444444;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.text-primary, .text-primary a {
+  color: #03B8A4 !important;
+}
+.text-primary:hover, .text-primary a:hover {
+  color: #03B8A4 !important;
+}
+
+.text-secondary, .text-secondary a {
+  color: #6861CE !important;
+}
+.text-secondary:hover, .text-secondary a:hover {
+  color: #6861CE !important;
+}
+
+.text-info, .text-info a {
+  color: #48ABF7 !important;
+}
+.text-info:hover, .text-info a:hover {
+  color: #48ABF7 !important;
+}
+
+.text-success, .text-success a {
+  color: #31CE36 !important;
+}
+.text-success:hover, .text-success a:hover {
+  color: #31CE36 !important;
+}
+
+.text-warning, .text-warning a {
+  color: #FFAD46 !important;
+}
+.text-warning:hover, .text-warning a:hover {
+  color: #FFAD46 !important;
+}
+
+.text-danger, .text-danger a {
+  color: #F25961 !important;
+}
+.text-danger:hover, .text-danger a:hover {
+  color: #F25961 !important;
+}
+
+label {
+  color: #495057 !important;
+  font-size: 14px !important;
+}
+
+.text-small {
+  font-size: 11px;
+}
+
+.metric-value {
+  margin-bottom: 5px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.metric-label {
+  font-size: 0.975rem;
+  font-weight: 500;
+  color: #686f76;
+  white-space: nowrap;
+  margin-bottom: 0;
+}
+
+/*   Font-weight    */
+.fw-light {
+  font-weight: 300 !important;
+}
+
+.fw-normal {
+  font-weight: 400 !important;
+}
+
+.fw-mediumbold {
+  font-weight: 400 !important;
+}
+
+.fw-bold {
+  font-weight: 600 !important;
+}
+
+.fw-extrabold {
+  font-weight: 700 !important;
+}
+
+.title-beetween-line {
+  width: 100%;
+  text-align: center;
+  border-bottom: 3px solid #03B8A4;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+.title-beetween-line span {
+  background: #f9fbfd;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 430px) {
+  .title-beetween-line {
+    font-size: 14px;
+  }
+}
+/* 		Opacity  	*/
+.op-9 {
+  opacity: 0.9;
+}
+
+.op-8 {
+  opacity: 0.8;
+}
+
+.op-7 {
+  opacity: 0.7;
+}
+
+.op-6 {
+  opacity: 0.6;
+}
+
+.op-5 {
+  opacity: 0.5;
+}
+
+.op-4 {
+  opacity: 0.4;
+}
+
+.op-3 {
+  opacity: 0.3;
+}
+
+.header-main {
+  position: fixed;
+  background: #ffffff;
+  width: 100%;
+  transition: all 0.5s;
+  height: 60px;
+  width: 100%;
+  z-index: 1001;
+  box-shadow: 0 0 5px rgba(18, 23, 39, 0.5);
+  top: 0px;
+}
+
+.logo-header {
+  float: left;
+  width: 250px;
+  height: 60px;
+  line-height: 60px;
+  color: #333333;
+  z-index: 1001;
+  font-size: 17px;
+  font-weight: 400;
+  padding-left: 25px;
+  padding-right: 25px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: all 0.3s;
+}
+.logo-header .logo {
+  color: #575962;
+  opacity: 1;
+  position: relative;
+  height: 100%;
+  width: 150px;
+}
+
+.footer-main {
+  background: #03B8A4;
+  margin-top: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #ffffff;
 }
 
 html, body {
-    max-width: 100%;
-    overflow-x: hidden;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-p{
-    padding-top: 0px;
-    padding-bottom: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+body {
+  min-height: 100vh;
+  position: relative;
+  background: #f9fbfd;
 }
 
-.header-main{
-    position: fixed;
-    top: 0;
-    background: #fff;
-    width: 100%;
-    height: 80px;
-    box-shadow: -1px 4px 7px 0px #79787842;
-    z-index: 1;
+p {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
-.header-main .logo {
-    width: 150px;
+.content-main {
+  margin-top: 60px;
 }
 
-.img-100{
-    width: 100%;
+@media screen and (max-width: 840px) {
+  .category-banner {
+    margin-top: 5px;
+  }
+}
+@media screen and (min-width: 430px) {
+  .container-center {
+    max-width: 800px;
+  }
+}
+.banner-home .mobile {
+  display: none;
+}
+.banner-home .desktop {
+  display: block;
 }
 
-.img-full{
-    width: 50%;
-}
-
-.img-full-std{
-    width: 90%;
-}
-
-.medium-text{
-    margin-top: 10px;
-    font-size: 20px;
-}
-
-.title-medium{
-    font-size: 30px;
-    font-family: "poiret";
-}
-
-.content-main{
-    margin-top: 80px;
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-left: 20px;
-}
-
-.big-title{
-    font-size: 70px;
-    font-weight: bold;
-    color: #000;
-    font-family: "humanist";
-}
-
-.sub-title{
-    font-family: "quicksand";
-    font-size: 21px;
-}
-
-.btn-big{
-    color: #fff;
-    background-color: #000;
-    width: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    font-family: "humanist";
-    padding: 0.7rem 0.6rem;
-    font-size: 20px;
-}
-
-.icon-ventas-corporativa{
-    width: 150px;
-}
-
-.title-icon{
-    font-family: "quicksand";
-}
-
-.input-form-std{
-    width: 100%;
-    background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    padding: 0.7rem 0.6rem;
-}
-
-.form-group-std{
-    margin-bottom: 20px;
-}
-
-.container-center{
-    padding-left: 300px;
-    padding-right: 300px;
-}
-
-.c-c-c-1{
-    background-color: rgba(221, 208, 205, 0.116);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.title-copyright{
-    font-size: 0.9em;
-    color: #000;
-}
-
-.footer-main{
-    background: var(--principal-green);
-    margin-top: 40px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    color: #fff;
-}
-
-.title-detail-product{
-    font-size: 30px;
-    line-height: 1.2;
-    font-weight: bold;
-}
-
-.sku-detail-product{
-    font-size: 18px;
-    color: gray;
-}
-
-.img-main-detail-product{
-    width: 100%;
-}
-
-.btn-add-product{
-    background-color: var(--principal-yellow);
-    border : 0px;
-    font-weight: bold;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    font-size: 13px;
-}
-
-.detail-product-quantity{
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    padding: 0.5rem 0.5rem;
-    min-width: 100px;
-}
-
-.price-sale{
-    font-weight: bold;
-    font-size: 25px;
-}
-
-.price-list{
-
-}
-
-
-/* Product desplegable */
-.tabs-jc {
-    overflow: hidden;
-}
-
-.tab-jc {
-    width: 100%;
-    color: black;
-    overflow: hidden;
-    margin-bottom: 10px;
-}
-
-.tab-jc-label {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    padding: 1em;
-    background: #f1f3f6;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.tab-jc-content{
-    display: none;
-}
-
-.tab-jc-label:hover {
-    background: #e2e5ea;
-}
-
-.tab-jc-label::after {
-    content: "\276F";
-    width: 1em;
-    height: 1em;
-    text-align: center;
-    -webkit-transition: all .35s;
-    transition: all .35s;
-}
-
-.input-desplegable:checked + .tab-jc-label {
-    background: #e2e5ea;
-}
-
-.input-desplegable:checked + .tab-jc-label::after {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-}
-
-.input-desplegable:checked ~ .tab-jc-content {
-    max-height: 100vh;
-    padding: 1em;
+@media screen and (max-width: 430px) {
+  .banner-home .mobile {
     display: block;
+  }
+  .banner-home .desktop {
+    display: none;
+  }
+}
+.card-product {
+  margin: 0 0.5em;
+  margin-bottom: 10px;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  border: none;
+  overflow: hidden;
+}
+.card-product .card-title-product {
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: bold;
+  font-family: "quicksand";
+}
+.card-product .content-image-card {
+  height: 300px;
+  position: relative;
+}
+.card-product .content-image-card .img-product {
+  max-width: 300px;
+  max-height: 300px;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.card-product .card-price-sale {
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "quicksand";
+  text-align: center;
+}
+.card-product .card-list-sale {
+  text-align: center;
+  font-size: 15px;
+  text-decoration: line-through;
+}
+.card-product .btn-card-product {
+  border-radius: 2px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 100%;
+  color: white;
+  border: none;
+  background-color: #03B8A4;
+  font-weight: bold;
 }
 
-.input-desplegable {
-    position: absolute;
-    opacity: 0;
-    z-index: -1;
-}
-/* Product desplegable */
-
-
-.content-main-std{
-    padding-top: 0px;
-    padding-right: 0px;
-    padding-left: 0px;
+.card-product:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
 }
 
-@media only screen and (max-width: 1200px) {
-    .container-center{
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .big-title{
-        font-size: 40px;
-    }
-
-    .icon-ventas-corporativa{
-        width: 80px;
-    }
-
-    .img-full{
-        width: 100%;
-    }
-
-    .img-full-std{
-        width: 100%;
-    }
-
-    .title-detail-product{
-        text-align: center;
-        margin-top: 0px;
-        padding-top: 0px;
-        margin-bottom: 0px;
-        padding-bottom: 0px;
-    }
-
-    .sku-detail-product{
-        text-align: center;
-        margin-top: 0px;
-        padding-top: 0px;
-        margin-bottom: 0px;
-        padding-bottom: 0px;
-    }
-
-    .price-sale{
-        text-align: center;
-        margin-top: 0px;
-        padding-top: 0px;
-        margin-bottom: 0px;
-        padding-bottom: 0px;
-    }
-
-    .price-list{
-        text-align: center;
-        margin-top: 0px;
-        padding-top: 0px;
-        margin-bottom: 0px;
-        padding-bottom: 0px;
-    }
-
-    .detail-product-quantity{
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .label-cantidad{
-        text-align: center;
-    }
-
-    .btn-add-product{
-        width: 100%;
-    }
-
+@media screen and (max-width: 430px) {
+  .content-image-card {
+    height: 210px !important;
+  }
+  .content-image-card .img-product {
+    max-width: 210px !important;
+    max-height: 210px !important;
+  }
+}
+@media screen and (max-width: 840px) {
+  .content-image-card {
+    height: 260px !important;
+  }
+  .content-image-card .img-product {
+    max-width: 260px !important;
+    max-height: 260px !important;
+  }
 }
 
-@media screen and (min-width: 700px) and (max-width: 900px) { 
-
-    .img-main-detail-product{
-        width: 70%;
-    }
-
-}
-
-
-@media all and (min-width: 999px) {
-    .deskContent {display:block;}
-    .mobileContent {display:none;}
-}
-
-@media all and (max-width: 899px) {
-    .deskContent {display:none;}
-    .mobileContent {display:block;}
-}
-
-
-
-.carousel-inner-custom{
-    padding: 1em;
-}
-.card-product-custom{
-    margin: 0 .5em;
-    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
-    border: none;
-}
-.carousel-control-prev-custom, .carousel-control-next-custom{
-    background-color: #e1e1e1;
-    width: 6vh;
-    height: 6vh;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-@media (min-width: 768px) {
-    .carousel-inner-custom {
-      display: flex;
-    }
-    .carousel-item-custom {
-      margin-right: 0;
-      flex: 0 0 33.333333%;
-      display: block;
-    }
-}
+/*# sourceMappingURL=io.css.map */
