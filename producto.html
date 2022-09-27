@@ -9,152 +9,190 @@
         <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
         <link rel="stylesheet" href="assets/vendor/css/slick/slick.css">
         <link rel="stylesheet" href="assets/vendor/css/slick/slick-theme.css">    
-        <link rel="stylesheet" href="./assets/css/io.css?v=1">
+        <link rel="stylesheet" href="./assets/css/theme.css?v=1">
     </head>
 
     <body>
 
-        <header class="header-main">
-            <div class="deskContent">
-                <img class="logo" src="assets/img/logo_mieko.svg" alt="">
-                <a href="https://mieko.pe/mi-cuenta" title="Acceda a su cuenta de cliente" rel="nofollow">
-                    <i class="las la-user icon_top"></i>
+
+      <header class="header-main">
+        <div class="hidden-mobile">
+          <div class="row">
+            <div class="col-md-2">
+              <div class="logo-header ms-5">
+                <a href="home.html" class="logo">
+                  <img src="assets/img/logo_mieko.svg" alt="Mieko logo" class="logo-header-img navbar-brand">
                 </a>
+              </div>
+            </div>  
+
+            <div class="col-md-8">
+              <div class="category_desktop_header pt-3">
+              <ul class="jc_category_list">
+                <li class="jc_category_item"><a href="/">CAtegoria 1</a></li>
+                <li class="jc_category_item"><a href="/">CAtegoria 2</a></li>
+                <li class="jc_category_item"><a href="/">CAtegoria 3</a></li>
+                <li class="jc_category_item"><a href="/">CAtegoria 4</a></li>
+                <li class="jc_category_item"><a href="/">CAtegoria 5</a></li>
+              </ul>
             </div>
-            <div class="mobileContent">
-                <img class="logo" src="assets/img/logo_mieko.svg" alt="">
             </div>
-        </header>
+
+            <div class="col-md-2">
+              <div class="icons-header">
+                
+                <a>
+                  <i class="fas fa-user"></i>
+                </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hidden-desktop">
+          <div class="row">
+            <div class="col-sm-3 col-md-3 col-3 px-4 py-3">
+              <a href="javascript:void(0)" onclick="toggle_side_menu()">
+                <i class="icon-menu align-middle fs-1"></i>
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-6 col-6">
+              <center>
+              <div class="logo-header">
+                <a href="home.html" class="logo">
+                  <img src="assets/img/logo_mieko.svg" alt="Mieko logo" class="logo-header-img navbar-brand">
+                </a>
+              </div>
+              </center>
+            </div>
+            <div class="col-sm-3 col-md-3 col-3 px-4 py-3">
+              <a href="/" class="float-end">  
+                <i class="las la-shopping-bag fs-1"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="side-menu">
+            <ul class="jc_category_list">
+              <li class="jc_category_item">
+                <a href="/">sdfsdf</a>
+              </li>
+              <li class="jc_category_item">
+                <a href="/">sdfsdf</a>
+              </li>
+              <li class="jc_category_item">
+                <a href="/">sdfsdf</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </header>
 
         <main class="content-main">
-
+            <div class="container pt-4">
             <div class="row">
                 <div class="col-md-12 col-lg-4">
-                    <p class="title-detail-product">MOCHILA PALMERAS MULTICOLOR</p>
-                    <p class="sku-detail-product">435345345</p>
+                    <p class="title-detail-product fs-2">{$product.name}</p>
+                    <p class="sku-detail-product">{$product.reference}</p>
 
-                    <div class="deskContent">
+                    <div class="hidden-mobile">
                         <br>
-                        <div class="tabs-jc">
-                            <div class="tab-jc">
-                               <input class="input-desplegable" type="checkbox" id="chck1">
-                               <label class="tab-jc-label" for="chck1">Detalles</label>
-                               <div class="tab-jc-content">
-                                -Amplio compartimento con cierre. Cosmetiquera mediana de hecha a base de materiales ligeros y resistentes, ideal para guardar tus esenciales del día, un accesorio funcional y versátil.
-                               </div>
-                            </div>
-
-                            <div class="tab-jc">
-                               <input class="input-desplegable" type="checkbox" id="chck2">
-                               <label class="tab-jc-label" for="chck2">Medidas</label>
-                               <div class="tab-jc-content">
-                                Largo (20.3 cms) Alto (12.7 cms) Ancho (7.6 cms)
-                               </div>
-                            </div>
-
-                            <div class="tab-jc">
-                                <input class="input-desplegable" type="checkbox" id="chck3">
-                                <label class="tab-jc-label" for="chck3">Materiales</label>
-                                <div class="tab-jc-content">
-                                    Poliéster 100%
-                                </div>
-                             </div>
-
-                         </div>
-
-                         Compartir
-                         
-                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-whatsapp" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
-                            <path d="M9 10a0.5 .5 0 0 0 1 0v-1a0.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a0.5 .5 0 0 0 0 -1h-1a0.5 .5 0 0 0 0 1" />
-                          </svg>
-
-                          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
-                          </svg>
+                        <div class="mb-3">{$product.description}</div>
+                        <table class="table table-striped table-hover">
+                            <tr>
+                                <td>fsdfsd</td>
+                                <td>fsdfsd</td>
+                            </tr>
+                            <tr>
+                                <td>fsdfsd</td>
+                                <td>fsdfsd</td>
+                            </tr>
+                            <tr>
+                                <td>fsdfsd</td>
+                                <td>fsdfsd</td>
+                            </tr>
+                            <tr>
+                                <td>fsdfsd</td>
+                                <td>fsdfsd</td>
+                            </tr>
+                        </table>
                     </div>
-
-
                 </div>
 
                 <div class="col-md-12 col-lg-4">
-                    <center><img class="img-main-detail-product" src="assets/img/producto.jpg" alt=""></center>
+                    <center><img class="img-main-detail-product img_full_product" src="assets/img/producto.jpg" alt=""></center>
                     <div>
-                        <div class="row">
-                            <div class="col-2"><img class="img-100" src="assets/img/producto.jpg" alt=""></div>
-                            <div class="col-2"><img class="img-100" src="assets/img/producto.jpg" alt=""></div>
-                            <div class="col-2"><img class="img-100" src="assets/img/producto.jpg" alt=""></div>
-                            <div class="col-2"><img class="img-100" src="assets/img/producto.jpg" alt=""></div>
-                            <div class="col-2"><img class="img-100" src="assets/img/producto.jpg" alt=""></div>
-                            <div class="col-2"><img class="img-100" src="assets/img/producto.jpg" alt=""></div>
-                            <div class="col-2"><img class="img-100" src="assets/img/producto.jpg" alt=""></div>
-                            <div class="col-2"><img class="img-100" src="assets/img/producto.jpg" alt=""></div>
+                        <div class="list-small-img">
+                            <div class="pe-auto img-small-content" onclick="show_img_full('assets/img/producto2.jpg')"><img class="img-thumbnail img-small" src="assets/img/producto2.jpg" alt=""></div>
+                            <div class="pe-auto img-small-content" onclick="show_img_full('assets/img/producto.jpg')"><img class="img-thumbnail img-small" src="assets/img/producto.jpg" alt=""></div>
+                            <div class="pe-auto img-small-content"><img class="img-thumbnail img-small" src="assets/img/producto.jpg" alt=""></div>
+                            <div class="pe-auto img-small-content"><img class="img-thumbnail img-small" src="assets/img/producto.jpg" alt=""></div>
+                            <div class="pe-auto img-small-content"><img class="img-thumbnail img-small" src="assets/img/producto.jpg" alt=""></div>
+                            <div class="pe-auto img-small-content"><img class="img-thumbnail img-small" src="assets/img/producto.jpg" alt=""></div>
+                            <div class="pe-auto img-small-content"><img class="img-thumbnail img-small" src="assets/img/producto.jpg" alt=""></div>
+                            <div class="pe-auto img-small-content"><img class="img-thumbnail img-small" src="assets/img/producto.jpg" alt=""></div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-md-12 col-lg-4">
-                    <p class="price-sale">S/. 170.10</p>
-                    <p class="price-list"><del>S/. 189.00</del></p> 
-                    <p class="label-cantidad">Cantidad</p>
-                    <input type="number" min="1" value="1" class="detail-product-quantity">
-                    <button class="btn-add-product">AÑADIR A CARRITO</button>
+                    <p class="price-sale"><strong>S/. {$product.price_amount}</strong></p>
+                    <p class="price-list"><del>S/. {$product.regular_price}</del></p>
+                    <br>
+                    <br>
+                    
+                    <div class="content-quantity">
+                        <span class="label-cantidad">Cantidad</span>
+                        <input type="number" min="1" value="1" class="input-product-quantity">
+                    </div>
+
+                    <button class="btn-add-product w-100"><strong>AÑADIR AL CARRITO</strong></button>
+
+                    <div class="information-order-ecommerce mt-5 hidden-mobile">
+                        <p><i class="las la-truck icon-information-ecommerce"></i><u>ENVÍOS A NIVEL NACIONAL</u></p>
+                        <p><i class="las la-money-bill-wave icon-information-ecommerce"></i><u>PAGA SEGURO CON NUESTROS MÉTODOS DE PAGO</u></p>
+                        <p><i class="las la-redo-alt icon-information-ecommerce"></i><u>DEVOLUCIONES EN 30 DÍAS</u></p>
+                    </div>
 
 
-                    <div class="mobileContent">
+                    <div class="hidden-desktop">
+
                         <br>
-                        <div class="tabs-jc">
-                            <div class="tab-jc">
-                               <input class="input-desplegable" type="checkbox" id="chck1">
-                               <label class="tab-jc-label" for="chck1">Detalles</label>
-                               <div class="tab-jc-content">
-                                -Amplio compartimento con cierre. Cosmetiquera mediana de hecha a base de materiales ligeros y resistentes, ideal para guardar tus esenciales del día, un accesorio funcional y versátil.
-                               </div>
-                            </div>
+                        <div class="mb-3">{$product.description}</div>
+                        <table class="table table-striped table-hover">
+                            <tr>
+                                <td>fsdfsd</td>
+                                <td>fsdfsd</td>
+                            </tr>
+                            <tr>
+                                <td>fsdfsd</td>
+                                <td>fsdfsd</td>
+                            </tr>
+                            <tr>
+                                <td>fsdfsd</td>
+                                <td>fsdfsd</td>
+                            </tr>
+                            <tr>
+                                <td>fsdfsd</td>
+                                <td>fsdfsd</td>
+                            </tr>
+                        </table>
 
-                            <div class="tab-jc">
-                               <input class="input-desplegable" type="checkbox" id="chck2">
-                               <label class="tab-jc-label" for="chck2">Medidas</label>
-                               <div class="tab-jc-content">
-                                Largo (20.3 cms) Alto (12.7 cms) Ancho (7.6 cms)
-                               </div>
-                            </div>
+                    </div>
 
-                            <div class="tab-jc">
-                                <input class="input-desplegable" type="checkbox" id="chck3">
-                                <label class="tab-jc-label" for="chck3">Materiales</label>
-                                <div class="tab-jc-content">
-                                    Poliéster 100%
-                                </div>
-                             </div>
 
-                         </div>
-
-                         Compartir
-                         
-                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-whatsapp" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
-                            <path d="M9 10a0.5 .5 0 0 0 1 0v-1a0.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a0.5 .5 0 0 0 0 -1h-1a0.5 .5 0 0 0 0 1" />
-                          </svg>
-
-                          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
-                          </svg>
+                    <div class="information-order-ecommerce mt-5 hidden-desktop">
+                        <p><i class="las la-truck icon-information-ecommerce"></i><u>ENVÍOS A NIVEL NACIONAL</u></p>
+                        <p><i class="las la-money-bill-wave icon-information-ecommerce"></i><u>PAGO SEGURO</u></p>
+                        <p><i class="las la-redo-alt icon-information-ecommerce"></i><u>DEVOLUCIONES EN 30 DÍAS</u></p>
                     </div>
 
                 </div>                
             </div>
 
-            COMPLEMENTALO CON
-
-
-            TAMBIÉN PUEDE INTERESARTE
-
-
+            </div>
 
         </main>
 
@@ -172,6 +210,11 @@
             </div>
             <center><span class="title-copyright">Hecho con ❤️ por Mieko</span></center>
         </footer>
+
+        <script src="assets/vendor/js/jquery/jquery.3.2.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="assets/vendor/js/slick.min.js"></script>      
+        <script src="assets/js/io.js"></script>
 
     </body>
 

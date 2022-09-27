@@ -1,7 +1,30 @@
 .footer-main{
     background: $primary-color;
-    margin-top: 40px;
     padding-top: 30px;
     padding-bottom: 30px;
     color: $white-color;
+
+    .title-copyright{
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+}
+
+.content-footer{
+    padding: 0 40px;
+}
+
+.logo_footer{
+    width: 250px;
+}
+
+.footer-link{
+    color: $white-color;
+    font-size:17px;
+    &:hover{
+        color: $secondary-color;
+    }
 }

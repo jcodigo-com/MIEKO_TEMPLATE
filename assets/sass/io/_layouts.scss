@@ -20,6 +20,11 @@ p{
     margin-top: $height-header;
 }
 
+.container-jc{
+    max-width: 1480px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 @media screen and (max-width: $max-tablet) {
     .category-banner{
@@ -30,5 +35,17 @@ p{
 @media screen and (min-width: $max-mobile) {
     .container-center{
         max-width: 800px;
+    }
+}
+
+@media (min-width: $max-tablet) {
+    .hidden-desktop{
+        display: none !important;
+    }
+}
+
+@media (max-width: $max-tablet) {
+    .hidden-mobile {
+        display: none !important;
     }
 }

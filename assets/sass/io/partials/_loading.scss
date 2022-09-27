@@ -1,0 +1,58 @@
+@keyframes anim1 {
+    from {
+      transform: scaleX(1);
+      -o-transform: scaleX(1);
+    }
+    to {
+      transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+    }
+  }
+  @-webkit-keyframes anim1 {
+    from {
+      -webkit-transform: scaleX(1);
+    }
+    to {
+      -webkit-transform: scaleX(-1);
+    }
+  }
+  #cover_load {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #00b6b1;
+    z-index: 9999;
+    display: table;
+  }
+  
+  .cover_load_content {
+    animation: anim1 2s ease-in-out alternate infinite;
+    -webkit-animation: anim1 2s ease-in-out alternate infinite;
+    display: flex;
+    justify-content: center;
+    height: 180px;
+    width: 150px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #FFFFFF;
+    border-radius: 50%;
+  }
+  
+  .cover_load_content_img {
+    text-align: center;
+    width: 160px;
+  }
+  
+  .cover_load_content_span {
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+    padding-top: 190px;
+  }

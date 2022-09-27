@@ -42,4 +42,15 @@ $(document).ready(function(){
             }
         ]
     });
+
+
 });
+
+function toggle_side_menu() {
+    $('.side-menu').toggleClass('active');
+}
+
+function show_img_full(img_link){
+    $('.img_full_product').attr('src', img_link);
+    $('.img_full_product').css('display', 'block');
+}   
